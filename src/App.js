@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Vacationlist from './components/Vacationlist';
 
-function App() {
+const vacationArray = [
+  {
+    name: "Virtanen Matti",
+    startingday: "2020-06-01",
+    endingday: "2020-06-30",
+  },
+  {
+    name: "Laaksonen Liisa",
+    startingday: "2020-06-26",
+    endingday: "2020-07-27",
+  },
+  {
+    name: "Korhonen Maija",
+    startingday: "2020-08-03",
+    endingday: "2020-08-30",
+  },
+];
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Vacationlist vacations ={vacationArray} />
   );
 }
 
